@@ -1,0 +1,28 @@
+MISS CHAWARMA — PHOTO DU CADEAU DANS LE POPUP
+
+SI TU AS DEJA INSTALLE LA VERSION V3 :
+1. Remplace frontend/index.html
+2. Remplace frontend/christmas-luxe.css
+3. Aucun besoin de changer frontend/assets/ pour les lots classiques.
+
+LE POPUP AFFICHE MAINTENANT :
+- Café, sandwich, Miss Tea, mouhalabiyé, baklawa, citronnade : la photo WEBP déjà présente.
+- −10 % : un badge doré (pas de photo nécessaire).
+- Lot en or : la photo correspondante si tu l'as ajoutée dans frontend/assets/gold/.
+  Si elle n'existe pas, un médaillon étoilé reste visible et le nom exact du lot est affiché.
+
+11 PHOTOS OPTIONNELLES POUR LES LOTS EN OR :
+menu-tarbouch.webp      -> Le menu Tarbouch offert
+knefeh.webp            -> Un knefeh offert
+cafe-gourmand.webp      -> Un café gourmand offert
+menu-mezmix.webp       -> Le menu Mez'Mix offert
+mrs-bowl.webp          -> Le Mrs.bowl offert
+menu-miss.webp         -> Le menu Miss offert
+plat-chawarma-poulet.webp -> Le plat chawarma poulet offert
+menu-mezmax.webp       -> Le menu Mez'Max offert
+mr-tarbouch.webp       -> Le Mr. Tarbouch offert
+mezze-royal.webp       -> Le Mezze Royal offert (24 et 31 décembre)
+plat-miss-chawarma.webp -> Le plat Miss Chawarma offert
+
+CONSEIL : mettre des WEBP transparents de préférence, 800x800 ou plus.
+Ne change pas backend/noel_app/prizes.py : le backend garde les chances actuelles.

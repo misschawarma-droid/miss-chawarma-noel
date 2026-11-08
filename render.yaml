@@ -1,0 +1,41 @@
+services:
+  - type: web
+    name: miss-chawarma-noel
+    runtime: python
+    region: frankfurt
+    plan: starter
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn noel_app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7
+      - key: APP_SECRET
+        generateValue: true
+      - key: DATABASE_URL
+        sync: false
+      - key: ADMIN_USER
+        value: noel
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: STAFF_PIN
+        sync: false
+      - key: ALLOWED_ORIGINS
+        value: https://misschawarma.fr,https://www.misschawarma.fr
+      - key: GAME_START
+        value: "2026-12-01"
+      - key: GAME_END
+        value: "2026-12-31"
+      - key: VERIFY_MODE
+        value: "on"
+      - key: TWILIO_ACCOUNT_SID
+        sync: false
+      - key: TWILIO_AUTH_TOKEN
+        sync: false
+      - key: TWILIO_FROM
+        sync: false
+      - key: BREVO_API_KEY
+        sync: false
+      - key: BREVO_SENDER_EMAIL
+        sync: false

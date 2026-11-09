@@ -24,13 +24,12 @@ REGULAR = [
 assert sum(p.weight for p in REGULAR) == 100
 
 _TARBOUCH = ("Le menu Tarbouch offert", "A free Tarbouch combo", 1290)
-_KNEFEH = ("Un knefeh offert", "A free knefeh", 790)
 _GOURMAND = ("Un café gourmand offert", "A free café gourmand", 790)
 _MEZMIX = ("Le menu Mez'Mix offert", "A free Mez'Mix combo", 1390)
 _BOWL = ("Le Mrs.bowl offert", "A free Mrs.bowl", 1190)
 _MISS = ("Le menu Miss offert", "A free Miss combo", 1390)
 _PLAT = ("Le plat chawarma poulet offert", "A free chicken chawarma plate", 1690)
-_CYCLE = [_TARBOUCH, _KNEFEH, _GOURMAND, _MEZMIX, _BOWL, _MISS, _PLAT]
+_CYCLE = [_TARBOUCH, _GOURMAND, _MEZMIX, _BOWL, _MISS, _PLAT]
 
 _SPECIALS = {
     12: ("Le menu Mez'Max offert", "A free Mez'Max combo", 1690),

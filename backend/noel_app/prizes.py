@@ -13,12 +13,12 @@ class Prize:
 
 
 REGULAR = [
-    Prize("cafe", "Un café offert", "A free coffee", 250, 22),
+    Prize("cafe", "Un café offert", "A free coffee", 250, 23),
     Prize("sandwich", "Un sandwich chawarma poulet offert", "A free chicken chawarma sandwich", 890, 3),
-    Prize("tea", "Un Miss Tea offert", "A free Miss Tea", 200, 21),
-    Prize("mouha", "Un mouhalabiyé offert", "A free mouhalabiyé", 490, 8),
+    Prize("tea", "Un Miss Tea offert", "A free Miss Tea", 200, 23),
+    Prize("mouha", "Un mouhalabiyé offert", "A free mouhalabiyé", 490, 5),
     Prize("baklawa", "Un baklawa pistache offert", "A free pistachio baklawa", 250, 20),
-    Prize("promo", "−10 % sur votre addition", "10% off your bill", 0, 13),
+    Prize("promo", "\u221210\u00a0% sur votre addition", "10% off your bill", 0, 13),
     Prize("lemon", "Une citronnade maison offerte", "A free homemade lemonade", 350, 13),
 ]
 assert sum(p.weight for p in REGULAR) == 100

@@ -17,7 +17,7 @@ REGULAR = [
     Prize("sandwich", "Un sandwich chawarma poulet offert", "A free chicken chawarma sandwich", 890, 3),
     Prize("tea", "Un Miss Tea offert", "A free Miss Tea", 200, 27),
     Prize("mouha", "Un mouhalabiyé offert", "A free mouhalabiyé", 490, 5),
-    Prize("baklawa", "Un baklawa pistache offert", "A free pistachio baklawa", 250, 20),
+    Prize("baklawa", "Un baklawa Cajou offert", "A free Cajou baklawa", 250, 20),
     Prize("promo", "\u221210\u00a0% sur votre addition", "10% off your bill", 0, 5),
     Prize("lemon", "Une citronnade maison offerte", "A free homemade lemonade", 350, 13),
 ]

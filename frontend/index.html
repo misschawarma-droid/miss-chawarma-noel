@@ -719,7 +719,8 @@
         width: auto;
         margin: -8px 0;
       }
-      @media (min-width: 700px) and (min-height: 800px), (min-aspect-ratio: 5/4) and (min-width: 640px) {
+      @media (min-width: 700px) and (min-height: 800px),
+        (min-aspect-ratio: 5/4) and (min-width: 640px) {
         .brand img {
           height: 78px;
           margin: -12px 0;
@@ -949,14 +950,19 @@
   </head>
   <body>
     <div class="tile" aria-hidden="true"></div>
-    <div class="festive-top" aria-hidden="true"><span>✦</span> CHRISTMAS AT MISS CHAWARMA <span>✦</span></div>
-    <div class="ornament ornament-a" aria-hidden="true"></div><div class="ornament ornament-b" aria-hidden="true"></div>
+    <div class="festive-top" aria-hidden="true">
+      <span>✦</span> CHRISTMAS AT MISS CHAWARMA <span>✦</span>
+    </div>
+    <div class="ornament ornament-a" aria-hidden="true"></div>
+    <div class="ornament ornament-b" aria-hidden="true"></div>
     <div class="forest" id="forest" aria-hidden="true"></div>
     <canvas id="snow" aria-hidden="true"></canvas>
 
     <div class="app">
       <header class="top">
-       <a class="brand" href="https://misschawarma.fr"><img src="logo-titre.png" alt="Miss Chawarma"></a>
+        <a class="brand" href="https://misschawarma.fr"
+          ><img src="logo-titre.png" alt="Miss Chawarma"
+        /></a>
         <div class="tools">
           <button class="tool" id="sound" type="button"></button>
           <button class="tool" id="lang" type="button"></button>
@@ -989,17 +995,48 @@
         <div class="cta">
           <button class="spin" id="spin" type="button"></button>
           <p class="hint" id="hint"></p>
-          <p class="tiny-rule">✧ &nbsp; UN TOUR • UNE SURPRISE • CHAQUE JOUR &nbsp; ✧</p>
+          <p class="tiny-rule">
+            ✧ &nbsp; UN TOUR • UNE SURPRISE • CHAQUE JOUR &nbsp; ✧
+          </p>
         </div>
         <section class="treats" aria-label="Les gourmandises de Miss Chawarma">
-          <p class="treats-heading">✦ &nbsp; LES GOURMANDISES À GAGNER &nbsp; ✦</p>
+          <p class="treats-heading">
+            ✦ &nbsp; LES GOURMANDISES À GAGNER &nbsp; ✦
+          </p>
           <div class="treats-gallery">
-            <div class="treat"><img src="assets/cafe.webp" alt="Vrai café Miss Chawarma" /><span>Café</span></div>
-            <div class="treat"><img src="assets/sandwich.webp" alt="Vrai sandwich libanais" /><span>Sandwich</span></div>
-            <div class="treat"><img src="assets/tea.webp" alt="Vrai thé à la menthe" /><span>Miss Tea</span></div>
-            <div class="treat"><img src="assets/mouha.webp" alt="Vraie mouhalabiyé à la pistache" /><span>Mouhalabiyé</span></div>
-            <div class="treat"><img src="assets/baklawa.webp" alt="Vraie baklawa" /><span>Baklawa</span></div>
-            <div class="treat"><img src="assets/lemon.webp" alt="Vraie citronnade Miss Chawarma" /><span>Citronnade</span></div>
+            <div class="treat">
+              <img src="assets/cafe.webp" alt="Vrai café Miss Chawarma" /><span
+                >Café</span
+              >
+            </div>
+            <div class="treat">
+              <img
+                src="assets/sandwich.webp"
+                alt="Vrai sandwich libanais"
+              /><span>Sandwich</span>
+            </div>
+            <div class="treat">
+              <img src="assets/tea.webp" alt="Vrai thé à la menthe" /><span
+                >Miss Tea</span
+              >
+            </div>
+            <div class="treat">
+              <img
+                src="assets/mouha.webp"
+                alt="Vraie mouhalabiyé à la pistache"
+              /><span>Mouhalabiyé</span>
+            </div>
+            <div class="treat">
+              <img src="assets/baklawa.webp" alt="Vraie baklawa" /><span
+                >Baklawa</span
+              >
+            </div>
+            <div class="treat">
+              <img
+                src="assets/lemon.webp"
+                alt="Vraie citronnade Miss Chawarma"
+              /><span>Citronnade</span>
+            </div>
           </div>
         </section>
       </main>
@@ -1044,7 +1081,14 @@
           <div class="ticket-product-halo" aria-hidden="true"></div>
           <div class="medal" id="medal"></div>
           <img class="ticket-photo" id="ticketPhoto" alt="" hidden />
-          <div class="ticket-discount" id="ticketDiscount" hidden aria-label="Réduction de 10 pour cent">−10<span>%</span></div>
+          <div
+            class="ticket-discount"
+            id="ticketDiscount"
+            hidden
+            aria-label="Réduction de 10 pour cent"
+          >
+            −10<span>%</span>
+          </div>
         </div>
         <p class="won" id="won"></p>
         <h2 class="prize" id="prizeName"></h2>
@@ -1073,6 +1117,13 @@
         <div class="after">
           <a id="book" href="https://misschawarma.fr/book-a-table"></a>
           <a id="menu" href="https://misschawarma.fr/menu"></a>
+          <a
+            class="review"
+            href="https://search.google.com/local/writereview?placeid=ChIJ6TzJLOtt5kcRZ9B6Zj-28qc"
+            target="_blank"
+            rel="noopener"
+            >Merci de votre visite ! Donnez votre avis sur Google</a
+          >
           <button id="replay" type="button" hidden></button>
         </div>
         <div class="stamp" id="stamp"></div>
@@ -1491,23 +1542,32 @@
       };
       // Lots en or : l'ID reste toujours "gold", mais le nom du lot change
       // chaque jour. Ajoutez simplement les fichiers dans frontend/assets/gold/.
-      const normalizePrizeName = (name) => String(name || "")
-        .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-        .toLowerCase().replace(/[’‘]/g, "'")
-        .replace(/\s+/g, " ").trim();
-      const GOLD_PRIZE_PHOTOS = Object.fromEntries([
-        ["Le menu Tarbouch offert", "menu-tarbouch.webp"],
-        ["Un knefeh offert", "knefeh.webp"],
-        ["Un café gourmand offert", "cafe-gourmand.webp"],
-        ["Le menu Mez'Mix offert", "menu-mezmix.webp"],
-        ["Le Mrs.bowl offert", "mrs-bowl.webp"],
-        ["Le menu Miss offert", "menu-miss.webp"],
-        ["Le plat chawarma poulet offert", "plat-chawarma-poulet.webp"],
-        ["Le menu Mez'Max offert", "menu-mezmax.webp"],
-        ["Le Mr. Tarbouch offert", "mr-tarbouch.webp"],
-        ["Le Mezze Royal offert", "mezze-royal.webp"],
-        ["Le plat Miss Chawarma offert", "plat-miss-chawarma.webp"],
-      ].map(([name, filename]) => [normalizePrizeName(name), `assets/gold/${filename}`]));
+      const normalizePrizeName = (name) =>
+        String(name || "")
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .toLowerCase()
+          .replace(/[’‘]/g, "'")
+          .replace(/\s+/g, " ")
+          .trim();
+      const GOLD_PRIZE_PHOTOS = Object.fromEntries(
+        [
+          ["Le menu Tarbouch offert", "menu-tarbouch.webp"],
+          ["Un knefeh offert", "knefeh.webp"],
+          ["Un café gourmand offert", "cafe-gourmand.webp"],
+          ["Le menu Mez'Mix offert", "menu-mezmix.webp"],
+          ["Le Mrs.bowl offert", "mrs-bowl.webp"],
+          ["Le menu Miss offert", "menu-miss.webp"],
+          ["Le plat chawarma poulet offert", "plat-chawarma-poulet.webp"],
+          ["Le menu Mez'Max offert", "menu-mezmax.webp"],
+          ["Le Mr. Tarbouch offert", "mr-tarbouch.webp"],
+          ["Le Mezze Royal offert", "mezze-royal.webp"],
+          ["Le plat Miss Chawarma offert", "plat-miss-chawarma.webp"],
+        ].map(([name, filename]) => [
+          normalizePrizeName(name),
+          `assets/gold/${filename}`,
+        ]),
+      );
       function prizePhotoFor(ticket) {
         if (!ticket) return null;
         if (ticket.is_gold || ticket.prize_id === "gold") {
@@ -1872,11 +1932,15 @@
       <path d="M0 0L${a.join(" ")}A${R} ${R} 0 0 1 ${b.join(" ")}Z" fill="${bg}" stroke="#7a5a12" stroke-width="3"/>
       <path d="M${pt(330, -HALF + 3).join(" ")}A330 330 0 0 1 ${pt(330, HALF - 3).join(" ")}" fill="none" stroke="${p.fill === "gold" ? "#7a5a12" : "#c59a28"}" stroke-width="2.5" stroke-dasharray="2 11" stroke-linecap="round"/>
       <text class="label" fill="${fg}" font-size="${size.toFixed(1)}"><textPath href="#arc" startOffset="50%" text-anchor="middle">${word}</textPath></text>
-      ${PRIZE_PHOTOS[p.id] ? `<g>
+      ${
+        PRIZE_PHOTOS[p.id]
+          ? `<g>
         <ellipse cx="0" cy="-299" rx="69" ry="34" fill="#071b12" opacity=".30" filter="url(#prizeAura)"/>
         <ellipse cx="0" cy="-322" rx="77" ry="46" fill="#f8c56b" opacity=".37" filter="url(#prizeAura)"/>
         <image href="${PRIZE_PHOTOS[p.id]}" x="-72" y="-366" width="144" height="122" preserveAspectRatio="xMidYMid meet" filter="url(#prizeDepth)"/>
-      </g>` : `<g transform="translate(-66 -298) scale(1.32)" fill="none" stroke="${fg}" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round">${ICONS[p.icon]}</g>`}
+      </g>`
+          : `<g transform="translate(-66 -298) scale(1.32)" fill="none" stroke="${fg}" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round">${ICONS[p.icon]}</g>`
+      }
     </g>`;
         });
         for (let i = 0; i < N; i++) {
@@ -2202,7 +2266,10 @@
         const photoKey = `${t.prize_id}|${t.label_fr}|${photoSrc || ""}`;
         prizeStage.classList.toggle("is-gold", !!t.is_gold);
         prizePhoto.alt = label(t);
-        prizeDiscount.setAttribute("aria-label", lang === "fr" ? "10 % de réduction" : "10% discount");
+        prizeDiscount.setAttribute(
+          "aria-label",
+          lang === "fr" ? "10 % de réduction" : "10% discount",
+        );
         if (prizeStage.dataset.photoKey !== photoKey) {
           prizeStage.dataset.photoKey = photoKey;
           prizePhoto.hidden = true;
@@ -2683,5 +2750,49 @@
         ? window.claude.hot.ready(start)
         : start(window.claude?.hot?.data ?? {});
     </script>
+    <dialog id="reviewDlg" class="review-pop" aria-labelledby="reviewTitle">
+  <div class="review-card">
+    <p class="review-tree" aria-hidden="true">✦</p>
+    <h2 id="reviewTitle"></h2>
+    <p id="reviewText"></p>
+    <a id="reviewGo" href="https://search.google.com/local/writereview?placeid=ChIJ6TzJLOtt5kcRZ9B6Zj-28qc" target="_blank" rel="noopener"></a>
+    <button id="reviewLater" type="button"></button>
+  </div>
+</dialog>
+<style>
+  .review-pop .review-card{position:relative;width:min(100%,380px);padding:28px 24px 18px;border-radius:22px;background:#fff6e8;color:#192b21;text-align:center;box-shadow:0 0 0 2px #cba653,0 28px 70px rgba(0,0,0,.6);display:grid;gap:12px;animation:reviewIn .4s cubic-bezier(.2,1.3,.4,1)}
+  @keyframes reviewIn{from{transform:translateY(24px) scale(.92);opacity:0}}
+  .review-tree{margin:0;font-size:2rem;line-height:1;color:#b98a22}
+  .review-card h2{margin:0;font-size:1.65rem;line-height:1.12;font-weight:600}
+  .review-card p{margin:0;font-size:1.05rem;line-height:1.4}
+  #reviewGo{display:flex;align-items:center;justify-content:center;min-height:56px;margin-top:4px;border-radius:12px;background:linear-gradient(180deg,#ecd07a,#c59a28 62%,#a87f18);color:#12301d;font-size:1.15rem;font-weight:700;text-decoration:none}
+  #reviewLater{min-height:44px;background:none;border:0;color:#192b21;font-size:1rem;text-decoration:underline;text-underline-offset:3px}
+  @media (prefers-reduced-motion:reduce){.review-pop .review-card{animation:none}}
+</style>
+<script>
+  (function () {
+    var TXT = {
+      fr: { title: "Votre cadeau est servi, régalez-vous !", text: "Si vous avez un instant, racontez votre visite sur Google. Votre avis sincère nous aide beaucoup.", go: "Donner mon avis", later: "Plus tard" },
+      en: { title: "Your gift is served, enjoy!", text: "If you have a moment, tell others about your visit on Google. Your honest review helps us a lot.", go: "Leave a review", later: "Maybe later" }
+    };
+    var dlg = document.getElementById("reviewDlg"), ticket = document.getElementById("ticket"), armed = false;
+    function open() {
+      var t = TXT[document.documentElement.lang === "en" ? "en" : "fr"];
+      document.getElementById("reviewTitle").textContent = t.title;
+      document.getElementById("reviewText").textContent = t.text;
+      document.getElementById("reviewGo").textContent = t.go;
+      document.getElementById("reviewLater").textContent = t.later;
+      if (!dlg.open) dlg.showModal();
+    }
+    // Seulement juste après une validation par l'équipe, jamais en rouvrant un ancien ticket.
+    document.getElementById("staffForm").addEventListener("submit", function () { armed = true; }, true);
+    new MutationObserver(function () {
+      if (armed && ticket.classList.contains("used")) { armed = false; setTimeout(open, 1400); }
+    }).observe(ticket, { attributes: true, attributeFilter: ["class"] });
+    document.getElementById("reviewLater").addEventListener("click", function () { dlg.close(); });
+    document.getElementById("reviewGo").addEventListener("click", function () { dlg.close(); });
+    dlg.addEventListener("click", function (e) { if (e.target === dlg) dlg.close(); });
+  })();
+</script>
   </body>
 </html>
